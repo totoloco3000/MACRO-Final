@@ -58,8 +58,8 @@ module.exports = httpServer => {
             var img = '';
             let browser = new swd.Builder();
             let tab =   browser.forBrowser("chrome")
-                        .setChromeOptions(new chrome.Options().headless())
-                        .setFirefoxOptions(new firefox.Options().headless())
+                        .setChromeOptions(new chrome.Options().addArguments(['--headless','--no-sandbox', '--disable-dev-shm-usage']))
+                        .setFirefoxOptions(new firefox.Options().addArguments(['--headless','--no-sandbox', '--disable-dev-shm-usage']))
                         .build();
             
             //Step 1 - Opening sign in page
@@ -131,8 +131,8 @@ module.exports = httpServer => {
            
             let browser = new swd.Builder();
             let tab =   browser.forBrowser("firefox")
-                        .setChromeOptions(new chrome.Options().headless())
-                        .setFirefoxOptions(new firefox.Options().headless())
+                        .setChromeOptions(new chrome.Options().addArguments(['--headless','--no-sandbox', '--disable-dev-shm-usage']))
+                        .setFirefoxOptions(new firefox.Options().addArguments(['--headless','--no-sandbox', '--disable-dev-shm-usage']))
                         .build();
             
             var totales = "";
