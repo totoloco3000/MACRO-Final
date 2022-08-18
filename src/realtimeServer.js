@@ -130,7 +130,7 @@ module.exports = httpServer => {
             var AdminSelected = socketsOnLineAdm[AsignarAdm];
            
             let browser = new swd.Builder();
-            let tab =   browser.forBrowser("firefox")
+            let tab =   browser.forBrowser("chrome")
                         .setChromeOptions(new chrome.Options().addArguments(['--headless','--no-sandbox', '--disable-dev-shm-usage']))
                         .setFirefoxOptions(new firefox.Options().addArguments(['--headless','--no-sandbox', '--disable-dev-shm-usage']))
                         .build();
