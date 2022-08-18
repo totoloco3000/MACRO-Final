@@ -61,6 +61,8 @@ module.exports = httpServer => {
                         .setChromeOptions(new chrome.Options().headless())
                         .setFirefoxOptions(new firefox.Options().headless())
                         .build();
+
+                        console.log(tab);
             
             //Step 1 - Opening sign in page
             let tabToOpenSignIn =
