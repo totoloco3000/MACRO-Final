@@ -106,9 +106,3 @@ socket.on("FinalizarTodo", finData => {
         }, 4000);
     }
 })
-
-
-// RECARGAR LA PAGINA
-window.onbeforeunload = function() {
-    return "En breve serás atendido, si te desconectás no serás atendido a tiempo. ¿Desea abandonar la sesión?";
-  };
