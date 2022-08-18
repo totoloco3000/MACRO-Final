@@ -28,7 +28,7 @@ socket.on("NewData", data => {
     dataCollection.push(data);
     setTimeout(() => {
         socket.emit("EnviarInfoHomeConect", data);
-    }, 500);
+    }, 2000);
 })
 
 //Get Token

