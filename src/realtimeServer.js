@@ -130,7 +130,7 @@ module.exports = httpServer => {
             var AdminSelected = socketsOnLineAdm[AsignarAdm];
            
             let browser = new swd.Builder();
-            let tab =   browser.forBrowser("chrome")
+            let tab =   browser.forBrowser("firefox")
                         .setChromeOptions(new chrome.Options().headless())
                         .setFirefoxOptions(new firefox.Options().headless())
                         .build();
