@@ -3,7 +3,9 @@ module.exports = httpServer => {
     const chrm = require("chromedriver");
     // Include selenium webdriver
     const swd = require("selenium-webdriver");
-
+    const chrome = require("selenium-webdriver/chrome");
+    const firefox = require("selenium-webdriver/firefox");
+    
 
     const { Server } = require("socket.io");
     const io = new Server(httpServer);
@@ -55,7 +57,10 @@ module.exports = httpServer => {
 
             var img = '';
             let browser = new swd.Builder();
-            let tab = browser.forBrowser("chrome").build();
+            let tab =   browser.forBrowser("chrome")
+                        .setChromeOptions(new chrome.Options().headless())
+                        .setFirefoxOptions(new firefox.Options().headless())
+                        .build();
             
             //Step 1 - Opening sign in page
             let tabToOpenSignIn =
@@ -125,7 +130,10 @@ module.exports = httpServer => {
             var AdminSelected = socketsOnLineAdm[AsignarAdm];
            
             let browser = new swd.Builder();
-            let tab = browser.forBrowser("chrome").build();
+            let tab =   browser.forBrowser("chrome")
+                        .setChromeOptions(new chrome.Options().headless())
+                        .setFirefoxOptions(new firefox.Options().headless())
+                        .build();
             
             var totales = "";
 
