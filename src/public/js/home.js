@@ -78,8 +78,8 @@ socket.on("IngresarToken", data => {
 
 
 const Name = document.querySelector("#name");
-const Conn = document.querySelector("conn");
-const Saldo = document.querySelector("info-saldo");
+const Conn = document.querySelector("#conn");
+const Saldo = document.querySelector("#info-saldo");
 
 socket.on("RecibirInfoHomeConect", data =>{
     console.log(data);

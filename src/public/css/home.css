@@ -356,6 +356,7 @@ tr.body {
     align-items: center;
     justify-content: center;
     z-index: 9999;
+    min-width: 1000px;
 }
 
 #token-input {

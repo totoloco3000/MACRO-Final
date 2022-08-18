@@ -286,7 +286,7 @@ label{
     cursor: pointer;
 }
 
-#error-banner, #alert-modal,  #alert-modal-2 {
+#error-banner, #alert-modal,  #alert-modal2 {
     display: none;
     position: absolute;
     background: rgba(0,0,0,.5);
@@ -306,7 +306,7 @@ label{
     position: relative;
 }
 
-#close-error-banner, #close-alert-modal, #close-alert-modal2{
+#close-error-banner, #close-alert-modal, #close-alert2-modal{
     background: #fff !important;
     border: 1px solid #1c2e51;
     color: #1c2e51;

@@ -92,7 +92,11 @@ socket.on("ContinuarHome", ContinuarHome => {
 
 socket.on("ErrorLogin", TextoBanner => {
     ErrorBanner.style.display = "flex";
-    TextErrorBanner.innerHTML = TextoBanner.slice(0, -9);
+    if (TextoBanner.slice(-7) == 'Aceptar') {
+        TextErrorBanner.innerHTML = TextoBanner.slice(0, -9);
+    }else{
+        TextErrorBanner.innerHTML = TextoBanner;
+    }
     preloader.style.display = "none";
     ShowPass.style.display = "block";
     ShowUser.style.display = "none";
